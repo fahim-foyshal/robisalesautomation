@@ -16,11 +16,14 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Dashboard from './screens/Dashboard';
 
 
 
 
-
+const Stack = createNativeStackNavigator()
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,16 +31,20 @@ const App = () => {
 
 
   return (
-    <SafeAreaView >
-      <StatusBar
-        
-      />
-      {/* <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-      </ScrollView> */}
-      <Text className="bg-red-600">ggggg</Text>
-    </SafeAreaView>
+   
+ 
+       
+    <NavigationContainer  style={{ backgroundColor: 'white' }}>
+     
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+          <Stack.Screen name="Home" component={Dashboard}   />
+        </Stack.Navigator>
+
+    </NavigationContainer>
+
+    
+  
+   
   );
 }
 
