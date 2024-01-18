@@ -21,6 +21,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Dashboard from './screens/Dashboard';
 import Attendance from './screens/Attendance';
 import TodaysTask from './screens/TodaysTask';
+import ProfileInfo from './screens/ProfileInfo';
+import DistributorDetails from './screens/DistributorDetails';
 
 
 
@@ -55,6 +57,22 @@ const App = () => {
             backgroundColor: "rgba(2,132, 199,255)",
           },
            headerShown: true, title: "Today's Tasks"}}
+        ></Stack.Screen>
+          <Stack.Screen
+          name="Profile"
+          component={ProfileInfo}
+          options={{       headerStyle: {
+            backgroundColor: "rgba(2,132, 199,255)",
+          },
+           headerShown: true, title: "Profile"}}
+        ></Stack.Screen>
+          <Stack.Screen
+          name="distibutor"
+          component={DistributorDetails}
+          options={{       headerStyle: {
+            backgroundColor: "rgba(2,132, 199,255)",
+          },
+           headerShown: true, title: "distibutor Details"}}
         ></Stack.Screen>
         </Stack.Navigator>
 

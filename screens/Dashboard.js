@@ -25,6 +25,12 @@ const Dashboard = () => {
     const  navigateToTodaytask=()=>{
         navigation.navigate('tasks')
     }
+    const  navigateToProfileInfo=()=>{
+        navigation.navigate('Profile')
+    }
+    const  distibutorDetailsShow=()=>{
+        navigation.navigate('distibutor')
+    }
     
   return (
     <>
@@ -48,7 +54,9 @@ const Dashboard = () => {
     ) : (
       <Text>No user data found</Text>
     )} */}
-      <View className="bg-white h-[100px] w-[] rounded-bl-3xl rounded-br-3xl p-3" style={{backgroundColor:"rgba(2, 132 ,199,255)"}}>
+      <TouchableOpacity
+      onPress={navigateToProfileInfo}
+       className="bg-white h-[100px] w-[] rounded-bl-3xl rounded-br-3xl p-3" style={{backgroundColor:"rgba(2, 132 ,199,255)"}}>
         <View className="fixed flex flex-row items-center left-4"
           style={{elevation: 10}}>
           {/* <Image
@@ -78,18 +86,18 @@ const Dashboard = () => {
               <Text style={{ fontSize: 15, color: 'white',fontFamily:"DMMono-Regular" }}>ID :00155</Text>
             </View>
         </View>
-      </View>
+      </TouchableOpacity>
 
       <View style={{marginTop:20,}}>
        
         <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
   {/* First Card */}
-                            <View style={styles.cardContainer}>
+                            <TouchableOpacity onPress={distibutorDetailsShow} style={styles.cardContainer}>
                                 <View style={styles.card}>
                                 <FontAwesomeIcon icon={faBuildingCircleArrowRight} size={60} color="purple" />
                                 <Text style={styles.cardText}>Distributer</Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
                             {/* Second Card */}
                             <View style={styles.cardContainer}>
