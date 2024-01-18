@@ -89,6 +89,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+                storeFile file('robi_sales_automation_fahim_erp.keystore')
+                storePassword 'fahimrobi1122'
+                keyAlias 'fahim_robi1122'
+                keyPassword 'fahimrobi1122'
+    }
     }
     buildTypes {
         debug {
@@ -100,6 +106,8 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
+
         }
     }
 }

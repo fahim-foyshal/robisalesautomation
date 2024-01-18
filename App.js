@@ -19,6 +19,8 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Dashboard from './screens/Dashboard';
+import Attendance from './screens/Attendance';
+import TodaysTask from './screens/TodaysTask';
 
 
 
@@ -38,6 +40,22 @@ const App = () => {
      
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
           <Stack.Screen name="Home" component={Dashboard}   />
+          <Stack.Screen
+          name="SelfieAttendance"
+          component={Attendance}
+          options={{       headerStyle: {
+            backgroundColor: "rgba(2,132, 199,255)",
+          },
+           headerShown: true, title: 'Selfie Attendance' }}
+        ></Stack.Screen>
+          <Stack.Screen
+          name="tasks"
+          component={TodaysTask}
+          options={{       headerStyle: {
+            backgroundColor: "rgba(2,132, 199,255)",
+          },
+           headerShown: true, title: "Today's Tasks"}}
+        ></Stack.Screen>
         </Stack.Navigator>
 
     </NavigationContainer>
