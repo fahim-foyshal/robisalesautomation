@@ -73,7 +73,7 @@ const Dashboard = () => {
           <View
             className="w-[130px] m-3 h-[80px] rounded-xl "
             style={{elevation: 0}}>
-             <Text   style={{fontWeight:'800', fontSize: 15,  color: 'white',fontFamily:"monospace"}}>kamal hossain</Text>
+             <Text   style={{fontWeight:'800', fontSize: 15,  color: 'white',fontFamily:"monospace"}}>jamal hossain</Text>
               <Text style={{ fontSize: 15, color: 'white',fontFamily:"DMMono-Regular" }}>sales manager</Text>
               <Text style={{ fontSize: 15, color: 'white',fontFamily:"DMMono-Regular" }}>ID :00155</Text>
             </View>
