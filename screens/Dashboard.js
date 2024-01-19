@@ -25,6 +25,9 @@ const Dashboard = () => {
     const  navigateToTodaytask=()=>{
         navigation.navigate('tasks')
     }
+    const  navigateToDistributerList=()=>{
+        navigation.navigate('distributerlist')
+    }
     
   return (
     <>
@@ -84,12 +87,14 @@ const Dashboard = () => {
        
         <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
   {/* First Card */}
-                            <View style={styles.cardContainer}>
+                            <TouchableOpacity
+                            onPress={navigateToDistributerList}
+                             style={styles.cardContainer}>
                                 <View style={styles.card}>
                                 <FontAwesomeIcon icon={faBuildingCircleArrowRight} size={60} color="purple" />
                                 <Text style={styles.cardText}>Distributer</Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
                             {/* Second Card */}
                             <View style={styles.cardContainer}>
